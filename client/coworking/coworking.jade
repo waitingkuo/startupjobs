@@ -2,20 +2,27 @@ template(name="coworking")
 	.container-fluid
 		h1 Hello! Coworking Space!
 		
-		each spaces
-			hr
-			h2 {{name}}
-			a(href="{{web}}")
-				img(src="{{image}}")
-			hr
-		
-		
+		+spaceList
+
 		hr
 		h1 Add New Coworking Space:
 		hr
 		+insertSpaceItem
 		hr
 
+template(name="spaceList")
+	.container
+		each spaces
+			+spaceItem
+
+	
+template(name="spaceItem")
+	.col-md-4.column
+		hr
+		h2 {{name}}
+		a(href="{{web}}")
+			img(src="{{image}}",style="width:300px")
+		hr
 
 
 template(name="insertSpaceItem")
