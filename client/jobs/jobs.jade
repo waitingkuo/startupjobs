@@ -30,7 +30,7 @@ template(name="submitJob")
 template(name="updateJob")
   .row-fluid#update-job
     .container-fluid
-      +quickForm collection="Jobs" doc=job type="update" id="update-job" omitFields="ownerId,score"
+      +quickForm collection="Jobs" doc=job type="update" id="update-job" omitFields="ownerId,voterIds,score"
 
 template(name="jobListItem")
   a(href="{{pathFor 'jobDetail'}}")

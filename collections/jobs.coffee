@@ -66,7 +66,7 @@ Meteor.methods
         return Meteor.call 'popupError', '您已經給過分數'
       else
         Jobs.update {_id: jobId},
-          $dec: {score: 1}
+          $inc: {score: -1}
           $addToSet: {voterIds: Meteor.userId()}
     else
       Meteor.call 'popupError', '請先登入'
