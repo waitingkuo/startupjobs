@@ -4,5 +4,6 @@
     "iron-router": {},
     "bootstrap-3": {},
     "autoform": {}
+    "accounts-ui-bootstrap-3": {}
   }
 }

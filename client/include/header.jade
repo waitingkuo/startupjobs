@@ -1,0 +1,17 @@
+template(name="header")
+  .nav.navbar.navbar-default(role="navigation")
+    .container-fluid
+      .navbar-header
+        a.navbar-brand(href="{{pathFor 'index'}}") StartupJobs
+
+      ul.nav.navbar-nav
+        li
+          a(href="{{pathFor 'link1'}}") Link1
+	li
+          a(href="{{pathFor 'coworking'}}") Coworking Space
+	li
+          a(href="{{pathFor 'link3'}}") Link3
+      .navbar-collapse.collapse
+        ul.nav.navbar-nav.navbar-right
+            +loginButtons
+                    

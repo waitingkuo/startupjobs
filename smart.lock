@@ -6,6 +6,7 @@
       "iron-router": {},
       "bootstrap-3": {},
       "autoform": {}
+      "accounts-ui-bootstrap-3": {}
     },
     "packages": {
       "jade": {
@@ -27,6 +28,10 @@
         "git": "https://github.com/aldeed/meteor-autoform.git",
         "tag": "v0.15.3",
         "commit": "b0574c71d33ea8ecff397b3bf054601fb979e0b8"
+      "accounts-ui-bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
+        "tag": "v0.3.3",
+        "commit": "2e50b605d8d5ed68e48c4529a65f13552d8af3f9"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
