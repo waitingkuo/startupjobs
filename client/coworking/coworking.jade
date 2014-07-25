@@ -34,7 +34,7 @@ template(name="spaceDetail")
 			h2 {{space.phone}}
 			h2 {{space.address}}
 			
-			a(href="{{pathFor 'updateSpace' _id=space._id}}") Edit Infomations
+			a.btn.btn-default(href="{{pathFor 'updateSpace' _id=space._id}}") Edit Infomations
 			//- +quickForm collection="Space" doc=space type="readonly" id="space-detail"
 
 template(name="updateSpace")
