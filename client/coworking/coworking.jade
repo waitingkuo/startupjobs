@@ -1,0 +1,28 @@
+template(name="coworking")
+	.container-fluid
+		h1 Hello! Coworking Space!
+		
+		each spaces
+			hr
+			h2 {{name}}
+			a(href="{{web}}")
+				img(src="{{image}}")
+			hr
+		
+		
+		hr
+		h1 Add New Coworking Space:
+		hr
+		+insertSpaceItem
+		hr
+
+
+
+template(name="insertSpaceItem")
+	+quickForm collection="Space" doc=editingDoc id="insertSpaceItem" type="insert"
+
+
+
+
+  
+

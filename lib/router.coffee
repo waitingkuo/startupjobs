@@ -12,9 +12,9 @@ Router.map ->
     path: '/link1'
     template: 'link1'
   
-  @route 'link2',
-    path: '/link2'
-    template: 'link2'
+  @route 'coworking',
+    path: '/coworking'
+    template: 'coworking'
 
   @route 'link3',
     path: '/link3'

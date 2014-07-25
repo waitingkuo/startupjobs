@@ -11,3 +11,5 @@ coffeescript
 stylus
 iron-router
 bootstrap-3
+autoform
+collection2
