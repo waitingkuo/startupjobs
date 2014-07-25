@@ -21,6 +21,14 @@
     location:
       type: String
       label: '地址'
+    ownerId:
+      type: String
+      autoValue: ->
+        user = Meteor.user()
+        if user
+          return user._id
+        else
+          @unset
 
 
 Jobs.allow

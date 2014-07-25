@@ -18,7 +18,7 @@ Router.map ->
   @route 'submitJob',
     path: '/submit-job'
     template: 'submitJob'
-    onBeforeAction: ->
+    onBeforeAction: (pause) ->
       if not Meteor.user()?
         Meteor.call 'popupError', '請先登入'
         Router.go 'index'
@@ -26,6 +26,14 @@ Router.map ->
   @route 'updateJob',
     path: '/update-job/:_id'
     template: 'updateJob'
+    onBeforeAction: (pause) ->
+      job = Jobs.findOne _id: @params._id
+      if job and (job.ownerId is Meteor.userId()) 
+        return true
+
+      Meteor.call 'popupError', '這不是您張貼的職缺'
+      Router.go 'index'
+      
     data: ->
       job: => Jobs.findOne _id: @params._id
 
