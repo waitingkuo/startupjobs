@@ -3,8 +3,13 @@
     "jade": {},
     "iron-router": {},
     "bootstrap-3": {},
+
     "accounts-ui-bootstrap-3": {},
     "collection2": {},
     "autoform": {}
+
+
+
+
   }
 }

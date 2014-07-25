@@ -6,14 +6,24 @@ template(name="header")
 
       ul.nav.navbar-nav
         li
-          a(href="{{pathFor 'link1'}}") Link1
+          a(href="{{pathFor 'submitJob'}}") 張貼職缺
         li
-          a(href="{{pathFor 'link2'}}") Link2
+          a(href="{{pathFor 'coworking'}}") Coworking Space
         li
-          a(href="{{pathFor 'memberList'}}") M
-        li
-          a(href="{{pathFor 'memberPost'}}") 輸入技能資訊
+          a(href="{{pathFor 'memberList'}}") 求職者資料
       .navbar-collapse.collapse
         ul.nav.navbar-nav.navbar-right
             +loginButtons
-                    
+  .modal.fade(id="myModal",tabindex="-1",role="dialog",aria-labelledby="myModalLabel" aria-hidden="true")
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button(type="button",class="close",data-dismiss="modal")
+            span(aria-hidden="true") &times;
+            span.sr-only Close
+          h4.modal-title(id="myModalLabel") 修改使用者資料
+    
+        .modal-body
+          +quickForm(collection="UserHeadCount" id="updateUserForm" type="update" doc=memberProfile)
+template(name="_loginButtonsAdditionalLoggedInDropdownActions")
+    button.btn.btn-default.btn-block(id="login-buttons-edit-profile",data-toggle="modal",data-target="#myModal") 修改使用者資料  

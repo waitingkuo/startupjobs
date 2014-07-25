@@ -1,0 +1,13 @@
+template(name="insertMemberForm")
+  +autoForm(collection="UserHeadCount" id="insertMemberForm" type="insert")
+    +afQuickField(name='gender')
+    +afQuickField(name='website')
+    +afQuickField(name='salary')
+    +afQuickField(name='category' select="true" trueLabel="Yes" falseLabel="No")
+    +afFieldSelect(name='category')
+      option 前端工程師
+      option 後端工程師
+      option Designer
+    +afQuickField(name='summary' rows=7)
+    
+  button.btn.btn-primary(type="submit") 確定

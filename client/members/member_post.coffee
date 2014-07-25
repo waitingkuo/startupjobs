@@ -1,5 +1,5 @@
 @Template.memberPost.helpers(
-    userHeadCount:()->
+    memberProfile:()->
         userId = Meteor.userId()
-        userHeadCount.findOne({userId:userId})
+        UserHeadCount.findOne({userId:userId})
 )

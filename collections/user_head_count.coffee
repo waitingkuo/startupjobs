@@ -54,7 +54,7 @@ Schema.User = new SimpleSchema(
     gender: 
         type: String,
         label: "性別"
-        allowedValues: ['Male', 'Female']
+        allowedValues: ['男', '女']
         optional: true
     website: 
         label: "個人網站"
@@ -67,15 +67,15 @@ Schema.User = new SimpleSchema(
         label: "薪資"
         min: 0
         optional: false
-    skill: 
-        type: [Object]
+    skills: 
+        type: [String]
         label: "技能"
         optional: true
     category: 
-        type: Number
+        type: String
         label: "類別"
-        min: 0
-        optional: true
+        allowedValues: ['前端工程師', '後端工程師','Designer','其他']
+        optional: false
     location: 
         type: [Object]
         label: "工作地點"
