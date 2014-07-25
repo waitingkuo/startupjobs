@@ -38,6 +38,7 @@ Router.map ->
     path: '/coworking'
     template: 'coworking'
 
+
   @route 'space',
     path: '/space/:_id'
     template: 'spaceDetail'
@@ -52,6 +53,15 @@ Router.map ->
 
 
 
-  @route 'link3',
-    path: '/link3'
-    template: 'link3'
+  @route 'memberPost',
+    path: '/memberPost'
+    onBeforeAction:(pause)->
+      if not Meteor.user()
+        if not Meteor.loggingIn()
+          Router.go('/')
+          pause()
+  
+    
+  @route 'memberList',
+    path: '/memberList'
+

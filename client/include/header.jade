@@ -10,10 +10,22 @@ template(name="header")
         li
           a(href="{{pathFor 'coworking'}}") Coworking Space
         li
-          a(href="{{pathFor 'link3'}}") Link3
+          a(href="{{pathFor 'memberList'}}") 求職者資料
       .navbar-collapse.collapse
         ul.nav.navbar-nav.navbar-right
             +loginButtons
+  .modal.fade(id="myModal",tabindex="-1",role="dialog",aria-labelledby="myModalLabel" aria-hidden="true")
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button(type="button",class="close",data-dismiss="modal")
+            span(aria-hidden="true") &times;
+            span.sr-only Close
+          h4.modal-title(id="myModalLabel") 修改使用者資料
+    
+        .modal-body
+          +quickForm(collection="UserHeadCount" id="updateUserForm" type="update" doc=memberProfile)
+
                     
 
   .container-fluid
@@ -25,4 +37,9 @@ template(name="error")
   p.bg-warning(style="padding:20px;")
     button.close(type="button", data-dismiss="alert") &times;
     span {{message}}
+
+
+
+template(name="_loginButtonsAdditionalLoggedInDropdownActions")
+    button.btn.btn-default.btn-block(id="login-buttons-edit-profile",data-toggle="modal",data-target="#myModal") 修改使用者資料  
 
