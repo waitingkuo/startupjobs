@@ -16,6 +16,8 @@ Router.map ->
     path: '/link2'
     template: 'link2'
 
-  @route 'link3',
-    path: '/link3'
-    template: 'link3'
+  @route 'memberPost',
+    path: '/memberPost'
+    
+  @route 'memberList',
+    path: '/memberList'
