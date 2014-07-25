@@ -25,23 +25,28 @@ template(name="jobDetail")
 template(name="submitJob")
   .row-fluid
     .container-fluid
-      +quickForm collection="Jobs" type="insert" id="submit-job"
+      +quickForm collection="Jobs" type="insert" id="submit-job" omitFields="ownerId,voterIds,score"
 
 template(name="updateJob")
   .row-fluid#update-job
     .container-fluid
-      +quickForm collection="Jobs" doc=job type="update" id="update-job"
+      +quickForm collection="Jobs" doc=job type="update" id="update-job" omitFields="ownerId,score"
 
 template(name="jobListItem")
   a(href="{{pathFor 'jobDetail'}}")
     .job
       .row
-        .col-xs-9
+        .col-xs-1
+          button.btn.btn-primary.job-plus-1(href="#") 
+            i.glyphicon.glyphicon-plus
+          button.btn.btn-danger.job-minus-1(href="#") 
+            i.glyphicon.glyphicon-minus
+        .col-xs-8
           p 
             span {{jobTitle}} 
             span {{company}}
           p 
-            span 0 point
+            span {{score}} point
         .col-xs-3
           span {{salaryLowerBound}} ~ {{salaryUpperBound}}
           a.pull-right.btn.btn-info(href="{{pathFor 'updateJob'}}") 編輯
