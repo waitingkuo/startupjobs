@@ -5,6 +5,7 @@ Router.configure
     Errors.remove {seen: true}
   waitOn: -> [
     Meteor.subscribe 'jobs'
+    Meteor.subscribe 'space'
   ]
 
 Router.map ->
