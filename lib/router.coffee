@@ -1,6 +1,10 @@
 Router.configure
   layoutTemplate: 'layout'
-
+  onAfterAction: ->
+    Errors.remove {seen: true}
+  waitOn: -> [
+    Meteor.subscribe 'jobs'
+  ]
 
 Router.map ->
 
@@ -13,6 +17,9 @@ Router.map ->
   @route 'submitJob',
     path: '/submit-job'
     template: 'submitJob'
+    onBeforeAction: ->
+      if not Meteor.user()?
+        Router.go 'index'
 
   @route 'updateJob',
     path: '/update-job/:_id'

@@ -1,11 +1,7 @@
 #Template.jobList.helpers
 #  jobs: -> Jobs.find()
 
-Template.jobListItem.helpers
-  salaryLowerBound: ->
-    parseInt(@salaryLowerBound / 1000) + 'K'
-  salaryUpperBound: ->
-    parseInt(@salaryUpperBound / 1000) + 'K'
+#Template.jobListItem.helpers
 
 
 #Template.updateJob.helpers
