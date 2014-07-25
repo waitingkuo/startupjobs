@@ -28,11 +28,15 @@ template(name="spaceDetail")
 	.row-fluid
 		.container-fluid
 			hr
-			h2 {{space.name}}
-			a(href="{{space.web}}")
-				img(src="{{space.image}}",style="width:300px")
-			h2 {{space.phone}}
-			h2 {{space.address}}
+			
+			.col-md-6.column
+				a(href="{{space.web}}")
+					img(src="{{space.image}}",style="width:600px")
+			
+			.col-md-6.column
+				h2 {{space.name}}
+				h2 {{space.phone}}
+				h2 {{space.address}}
 			
 			a.btn.btn-default(href="{{pathFor 'updateSpace' _id=space._id}}") Edit Infomations
 			//- +quickForm collection="Space" doc=space type="readonly" id="space-detail"

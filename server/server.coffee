@@ -6,6 +6,7 @@ space_data = [
 	{name:"創立方", phone:"02-23419151#121", web:"http://www.iehnccu.com/", address:"台北市大安區金華街187號", image:"http://www.iehnccu.com/wp-content/uploads/2012/08/0915-Design-Thinking.jpg"},
 	{name:"車庫咖啡", web:"http://chekucafe.com/", image:"http://cn.wsj.com/pictures/photo/BJ20131204101345/05.jpg"},
 	{name:"Yser", phone:"03-6230117", web:"http://iaps.nctu.edu.tw/yes/index.php", address:"新竹市科學工業園區新安路5號4樓", image:"http://iaps.nctu.edu.tw/yes/images/rocketlauncher/blog/0-9.jpg"},
+	{ "name" : "Happen Coworking Space 好伴共同工作空間", "web" : "http://www.facebook.com/HappenTaichung", "phone" : "04-2223-1312", "address" : "台中市中區民族路35號", "image" : "http://clbc.tw/files/2013/12/1441392_663227627031484_1856872359_n.jpg"},
 ]
 
 if Space.find().count() == 0

@@ -48,11 +48,18 @@ Router.map ->
     data: ->
       space: => Space.findOne _id: @params._id
 
+
   @route 'updateSpace',
     path: '/update-space/:_id'
     template: 'updateSpace'
+    
     data: ->
       space: => Space.findOne _id: @params._id
+
+    onBeforeAction: ->
+      if not Meteor.user()?
+        Meteor.call 'popupError', '請先登入'
+        Router.go 'coworking'
 
 
 

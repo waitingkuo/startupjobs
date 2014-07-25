@@ -1,30 +1,49 @@
 # @Space = new Meteor.Collection "space"
 
-@Space = new Meteor.Collection("space", {
-    schema: {
-        name: {
+@Space = new Meteor.Collection("space", 
+    schema:
+        name:
             type: String,
-            label: "Name",
-        },
-        web: {
+            label: "Name"
+        web:
+            type: String
+            label: "Web"
+            optional: true
+        phone:
+            type: String
+            label: "Phone"
+            optional: true
+        address:
             type: String,
-            label: "Web",
-            optional: true,
-        },
-        phone: {
+            label: "Address"
+            optional: true
+        image: 
+            type: String
+            label: "Image"
+            optional: true
+)
+
+
+@UserEvalSpace = new Meteor.Collection("user_eval_space", 
+    schema:
+        name:
             type: String,
-            label: "Phone",
-            optional: true,
-        },
-        address: {
+            label: "Name"
+        web:
+            type: String
+            label: "Web"
+            optional: true
+        phone:
+            type: String
+            label: "Phone"
+            optional: true
+        address:
             type: String,
-            label: "Address",
-            optional: true,
-        },
-        image: {
-            type: String,
-            label: "Image",
-            optional: true,
-        },
-    }
-})
+            label: "Address"
+            optional: true
+        image: 
+            type: String
+            label: "Image"
+            optional: true
+)
+
