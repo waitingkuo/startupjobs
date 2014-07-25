@@ -6,3 +6,8 @@
 standard-app-packages
 autopublish
 insecure
+jade
+coffeescript
+stylus
+iron-router
+bootstrap-3
