@@ -5,9 +5,9 @@ Template.header.helpers
     UserHeadCount.findOne({userId:userId})
 
 Template.error.rendered = ->
-Meteor.defer =>
-    Errors.update @data._id,
-      $set: {seen: true}
+  Meteor.defer =>
+      Errors.update @data._id,
+        $set: {seen: true}
 
   
 
