@@ -1,11 +1,30 @@
+card()
+  background white
+  -webkit-box-shadow 0 1px 1px 0px rgba(0, 0, 0, 0.24)
+  -webkit-border-radius 2px
+
+.card
+  card()
+  .title
+    font-size 16px
+  
+#job-detail
+  .card + .card
+    margin-top 25px
+
+  .card
+    padding 20px
+
 #job-list
   max-width 1170px
   margin 0 auto
 
+  h2
+    font-size 16px
+    line-height 24px
+
   .jobs
-    background white
-    -webkit-box-shadow 0 1px 1px 0px rgba(0, 0, 0, 0.24)
-    -webkit-border-radius 2px
+    card()
     .job
       padding 20px 
     a:not(:nth-child(1)) > .job

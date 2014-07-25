@@ -21,3 +21,15 @@
     location:
       type: String
       label: '地址'
+
+
+Jobs.allow
+  insert: (userId) -> userId?
+
+  update: (userId) -> 
+    userId and (userId is doc.userId)
+
+  remove: (userId) -> 
+    userId and (userId is doc.userId)
+
+

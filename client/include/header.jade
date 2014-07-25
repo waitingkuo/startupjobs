@@ -15,3 +15,14 @@ template(name="header")
         ul.nav.navbar-nav.navbar-right
             +loginButtons
                     
+
+  .container-fluid
+    .row-fluid
+      each errors
+        +error
+
+template(name="error")
+  p.bg-warning(style="padding:20px;")
+    button.close(type="button", data-dismiss="alert") &times;
+    span {{message}}
+

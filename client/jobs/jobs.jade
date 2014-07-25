@@ -1,16 +1,26 @@
 template(name="jobList")
   #job-list
-    h2 職缺
     .row-fluid
-      .container-fluid
-        .jobs
-          each jobs
-            +jobListItem
+      h2 職缺
+      .jobs
+        each jobs
+          +jobListItem
             
 template(name="jobDetail")
-  .row-fluid
-    .container-fluid
-      +quickForm collection="Jobs" doc=job type="readonly" id="job-detail"
+  with job
+    .row-fluid#job-detail
+      .container-fluid
+        .card
+          .title {{jobTitle}}
+          p {{salaryLowerBound}} ~ {{salaryUpperBound}}
+        .card
+          .title 公司簡介
+          p {{company}}
+          p {{location}}
+          p 
+        .card
+          .title 職缺說明
+          p {{description}}
 
 template(name="submitJob")
   .row-fluid
@@ -18,7 +28,7 @@ template(name="submitJob")
       +quickForm collection="Jobs" type="insert" id="submit-job"
 
 template(name="updateJob")
-  .row-fluid
+  .row-fluid#update-job
     .container-fluid
       +quickForm collection="Jobs" doc=job type="update" id="update-job"
 
