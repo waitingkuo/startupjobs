@@ -20,9 +20,27 @@ template(name="spaceItem")
 	.col-md-4.column
 		hr
 		h2 {{name}}
-		a(href="{{web}}")
+		a(href="{{pathFor 'space'}}")
 			img(src="{{image}}",style="width:300px")
 		hr
+
+template(name="spaceDetail")
+	.row-fluid
+		.container-fluid
+			hr
+			h2 {{space.name}}
+			a(href="{{space.web}}")
+				img(src="{{space.image}}",style="width:300px")
+			h2 {{space.phone}}
+			h2 {{space.address}}
+			
+			a(href="{{pathFor 'updateSpace' _id=space._id}}") Edit Infomations
+			//- +quickForm collection="Space" doc=space type="readonly" id="space-detail"
+
+template(name="updateSpace")
+	.row-fluid
+		.container-fluid
+			+quickForm collection="Space" doc=space type="update" id="updateSpace"
 
 
 template(name="insertSpaceItem")
@@ -31,5 +49,5 @@ template(name="insertSpaceItem")
 
 
 
-  
+ 
 

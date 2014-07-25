@@ -18,12 +18,12 @@
         },
         address: {
             type: String,
-            label: "Phone",
+            label: "Address",
             optional: true,
         },
         image: {
             type: String,
-            label: "Phone",
+            label: "Image",
             optional: true,
         },
     }

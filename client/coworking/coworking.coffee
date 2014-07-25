@@ -15,3 +15,4 @@ Template.spaceList.helpers
 
 Template.insertSpaceItem.helpers
 	editingDoc: space_data[0]
+

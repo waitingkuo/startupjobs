@@ -31,6 +31,20 @@ Router.map ->
     path: '/coworking'
     template: 'coworking'
 
+  @route 'space',
+    path: '/space/:_id'
+    template: 'spaceDetail'
+    data: ->
+      space: => Space.findOne _id: @params._id
+
+  @route 'updateSpace',
+    path: '/update-space/:_id'
+    template: 'updateSpace'
+    data: ->
+      space: => Space.findOne _id: @params._id
+
+
+
   @route 'link3',
     path: '/link3'
     template: 'link3'
